@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	.set-flex {
+		@apply flex justify-center items-center;
+	}
+	.text-danger {
+		@apply text-light-danger dark:text-dark-danger text-sm mt-1
+	}
+	.odd-even-row {
+		@apply text-center bg-light-card dark:bg-dark-card odd:bg-[#f8f8ff] dark:odd:bg-[#161e2c]
+	}
+	.icon-tooltip {
+		@apply absolute bottom-full mb-3 left-1/2 -translate-x-1/2 bg-light-card dark:bg-dark-card text-light-text dark:text-dark-text px-3 py-1 rounded-sm text-xs border border-light-shadow dark:border-dark-shadow set-flex hidden group-hover:block md:group-hover:hidden md:invisible md:opacity-0
+	}
+
+
+
+	/* Sidebar Class */
+	.sidebar-btn {
+		@apply w-full flex items-center p-2 text-base font-normal rounded-lg hover:bg-light-shadow dark:hover:bg-dark-shadow;
+	}
+	.sidebar-btn.active {
+		@apply bg-light-shadow dark:bg-dark-shadow font-semibold;
+	}
+	.sidebar-btn.active .box-icon {
+		@apply bg-custom-gradient text-white;
+	}
+	.sidebar-btn.active .list-title {
+		@apply font-semibold;	
+	}
+
+	.box-icon {
+		@apply set-flex bg-light-bg dark:bg-dark-bg shadow-sm shadow-slate-400 dark:shadow-slate-600 text-light-text dark:text-dark-text p-1.5 md:p-2 size-6 md:size-7 rounded-lg text-center transition-all duration-200;
+	}
+	.list-title {
+		@apply ml-3 text-base font-light text-light-text dark:text-dark-text group-hover:font-semibold transition-all duration-200;
+	}
+	
+	.list-subtitles {
+		@apply mt-1 text-sm font-light rounded-lg flex items-center p-2 hover:bg-light-shadow dark:hover:bg-dark-shadow transition duration-75 pl-8;
+	}
+	.list-subtitles.active {
+		@apply bg-light-shadow dark:bg-dark-shadow;
+	}
+	.list-subtitles.active .list-title {
+		@apply font-semibold;
+	}
+
+
+
+	/* Sidebar when minimized */
+	aside#sidebar.active {
+		@apply w-0 md:w-[70px]
+	}
+	aside#sidebar.active .sidebar-btn {
+		@apply px-1 py-2
+	}
+	aside#sidebar.active .list-title {
+		@apply hidden
+	}
+	aside#sidebar.active .list-subtitles {
+		@apply p-3 md:px-2 md:py-[13px] justify-center
+	}
+	aside#sidebar.active .list-subtitles svg {
+		@apply size-[14px]
+	}
+
+
+
+	/* Inputs */
+	.focus-input {
+		@apply focus-within:border-purple-600 focus-within:ring-1 focus-within:ring-purple-600
+	}
+	.box-search-input {
+		@apply set-flex rounded-lg bg-light-bg dark:bg-dark-bg focus-input shadow-md border border-light-shadow dark:border-dark-shadow text-light-text dark:text-dark-text
+	}
+	.search-input {
+		@apply outline-none appearance-none border border-none rounded-lg w-full leading-tight py-[7px] pr-2 bg-light-bg dark:bg-dark-bg text-light-text dark:text-dark-text
+	}
+	.category-input {
+		@apply outline-none rounded-lg w-full leading-tight p-1.5 focus-input shadow-md border border-light-shadow dark:border-dark-shadow bg-light-bg dark:bg-dark-bg text-light-text dark:text-dark-text
+	}
+	.basic-input {
+		@apply shadow-md appearance-none rounded-lg w-full py-2 px-3 leading-tight focus-input bg-light-bg dark:bg-dark-bg text-light-text dark:text-dark-text border border-light-shadow dark:border-dark-shadow
+	}
+
+
+
+	/* All Button */
+	.btn-basic {
+		@apply set-flex gap-1 text-light-text dark:text-dark-text bg-light-shadow dark:bg-dark-shadow hover:bg-custom-gradient hover:text-white py-2 px-3 md:px-4 rounded-lg shadow-lg
+	}
+	.btn-gradient {
+		@apply flex items-center gap-1 text-white py-2 px-3 rounded-lg bg-custom-gradient shadow-md
+	}
+
+
+
+	/* Modal Form & Modal message succeess */
+	.modal.show {
+		@apply opacity-100 pointer-events-auto 
+	}
+	.success-modal.show {
+		@apply opacity-100 pointer-events-auto
+	}
+
+
+
+	/* Pagination List */
+	ul.pagination > li.active a {
+		@apply bg-custom-gradient rounded-md text-white
+	}
+
+
+
+	/* Autocomplete for student and counselor search input */
+	.autocomplete-items {
+		@apply absolute shadow-2xl top-full bg-light-shadow dark:bg-dark-shadow w-full max-h-[160px] overflow-hidden rounded-md overflow-y-auto z-50
+	}
+	.autocomplete-items div {
+		@apply p-2.5 cursor-pointer text-light-text dark:text-dark-text
+	}
+	.autocomplete-items div:hover {
+		@apply bg-light-card dark:bg-dark-card
+	}
+
+
+
+	/* Calendar */
+	#displayMonth.active,
+	#displayYear.active {
+		@apply bg-custom-gradient text-white
+	}
+}

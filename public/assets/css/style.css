@@ -1,0 +1,221 @@
+:root {
+	--bg: #f1f5f9;
+	--card: #fff;
+	--empty: #e2e8f0;
+	--text: #000;
+	--today: #bfdbfe;
+	--border: #c5d0db;
+}
+html.dark {
+	--bg: #111827;
+	--card: #17202f;
+	--empty: #1e293b;
+	--text: #fff;
+	--today: #31455e;
+	--border: #27354d;
+}
+
+
+
+/* Calendar */
+.calendar-header .header {
+	font-weight: bold;
+	text-align: center;
+	font-size: 1.25rem;
+	margin: 0.5rem 0;
+	color: var(--text);
+}
+.calendar-body {
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	gap: 0;
+	color: var(--text);
+}
+#calendar .date {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	gap: 1.5px;
+	color: var(--text);
+}
+#calendar .day,
+#calendar .date,
+#calendar .empty {
+	width: auto;
+	height: 4.5rem;
+	border: 1px solid var(--border);
+	text-align: right;
+	background-color: var(--bg);
+}
+#calendar.calendar-month .date,
+#calendar.calendar-month .empty {
+	height: 8rem;
+	min-width: 8rem;
+	width: 100%;
+}
+#calendar .day {
+	text-align: center;
+	height: 3rem;
+	line-height: 2.5rem;
+}
+#calendar .empty {
+	background-color: var(--empty);
+}
+#calendar .today {
+	background-color: var(--today);
+}
+
+#calendar .jadwal-head {
+	display: flex;
+	flex-direction: row-reverse;
+	background-color: var(--empty);
+	height: max-content;
+}
+#calendar .jadwal-head .overlay {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	background-color: transparent;
+	transition: all 0.3s;
+	width: 100%;
+	display: none;
+}
+#calendar .jadwal-head .overlay svg {
+	color: var(--text);
+}
+#calendar .date:hover > .jadwal-head .overlay {
+	display: flex;
+}
+#calendar .jadwal-head:hover .overlay svg {
+	color: #fff;
+}
+#calendar.calendar-year .jadwal-head .overlay {
+	padding: 0;
+}
+#calendar.calendar-year .jadwal-head .overlay svg {
+	height: 0.9rem;
+}
+#calendar.calendar-year .jadwal-head span {
+	font-size: 0.7rem;
+}
+
+#calendar .jadwal-body {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5px;
+	justify-content: center;
+	align-items: start;
+	overflow: auto;
+	width: 100%;
+	color: var(--text);
+}
+#calendar .jadwal-info {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	padding: 0 5px 0 6px;
+	align-items: center;
+	border-radius: 5px;
+	color: #fff;
+}
+#calendar .jadwal-student {
+	width: 50%;
+	text-wrap: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	word-break: break-all;
+	font-size: 0.9rem;
+	text-align: left;
+	color: #fff;
+}
+#calendar .jadwal-detail {
+	text-decoration: underline;
+	font-size: 0.9rem;
+	padding: 0 5px;
+	border-radius: 5px;
+}
+#calendar .more-info {
+	background-color: var(--empty);
+	border: 8px solid var(--border);
+	border-top: 4px;
+	position: absolute;
+	z-index: 999999 !important;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	border-radius: 5px;
+	overflow: auto;
+	max-height: 14rem;
+	min-width: 100%;
+}
+#calendar .more-info .header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: var(--border);
+	color: var(--text);
+	padding: 6px 2px;
+	text-align: center;
+}
+#calendar .more-info-list {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: 4px;
+	padding: 1rem;
+}
+#calendar.calendar-year .more-info {
+	width: 15rem;
+	max-height: 12rem;
+}
+#calendar.calendar-year .expand-more {
+	font-size: 0.8rem;
+	margin: 3px;
+	color: var(--text);
+}
+
+@media only screen and (max-width: 768px) {
+	#calendar .more-info {
+		width: 14rem !important;
+		font-size: 0.85rem !important;
+	}
+}
+
+
+
+
+/* Apexchart custom style (tooltip & hamburger menu) */
+#distributed-column .apexcharts-tooltip, 
+#spline-area .apexcharts-tooltip {
+	background-color: var(--card) !important;
+	color: var(--text) !important;
+	border: 1px solid var(--today) !important;
+	box-shadow: none !important;
+}
+#distributed-column .apexcharts-tooltip-title, 
+#spline-area .apexcharts-tooltip-title {
+	background-color: var(--bg) !important;
+	border-bottom: 1px solid var(--today) !important;
+}
+#distributed-column .apexcharts-menu,
+#spline-area .apexcharts-menu {
+	background-color: var(--bg) !important;
+	color: var(--text) !important;
+	border: 1px solid var(--today) !important;
+}
+#distributed-column .apexcharts-menu .apexcharts-menu-item:hover,
+#spline-area .apexcharts-menu .apexcharts-menu-item:hover {
+	background-color: var(--empty) !important;
+}
+.apexcharts-legend-text,
+.apexcharts-yaxis-title-text,
+.apexcharts-xaxis-title-text,
+.apexcharts-xaxis-label,
+.apexcharts-yaxis-label  {
+	color: var(--text) !important;
+	fill: var(--text) !important;
+}
