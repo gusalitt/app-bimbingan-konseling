@@ -46,8 +46,8 @@ Pastikan sudah terinstal:
 1. **Clone repository atau download ZIP:**
 
    ```bash
-   git clone <repo-url>
-   cd <project-folder>
+   git clone https://github.com/gusalitt/app-bimbingan-konseling.git
+   cd app-bimbingan-konseling
    ```
 
 2. **Install dependensi:**
