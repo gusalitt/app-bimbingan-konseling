@@ -5,7 +5,11 @@
 App Bimbingan Konseling adalah aplikasi yang dirancang untuk membantu pengelolaan data siswa, guru, konselor, pelanggaran, konseling, dan industri dalam lingkungan sekolah. Aplikasi ini dilengkapi dengan fitur manajemen data, pencatatan riwayat pelanggaran siswa, serta jadwal konseling yang terintegrasi dengan kalender.
 
 ---
+## 🖥️ Tampilan Awal (🌞 Light / 🌙 Dark)
+![Tampilan Project di Light Mode](./public/assets/img/dashboard-view-in-light-mode.png)
+![Tampilan Project di Dark Mode](./public/assets/img/dashboard-view-in-dark-mode.png)
 
+---
 ## 🎯 Fitur
 
 - **CRUD Lengkap:**
