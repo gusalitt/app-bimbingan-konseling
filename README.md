@@ -1,32 +1,31 @@
 # App Bimbingan Konseling
 
-## 📖 Ringkasan Proyek
-
-App Bimbingan Konseling adalah aplikasi yang dirancang untuk membantu pengelolaan data siswa, guru, konselor, pelanggaran, konseling, dan industri dalam lingkungan sekolah. Aplikasi ini dilengkapi dengan fitur manajemen data, pencatatan riwayat pelanggaran siswa, serta jadwal konseling yang terintegrasi dengan kalender.
+The Guidance and Counselling App is an application designed to assist with the management of data relating to pupils, teachers, counsellors, disciplinary incidents, counselling sessions and industry matters within a school setting. The app features data management tools, a record of pupils’ disciplinary history, and a counselling schedule integrated with the calendar.
 
 ---
-## 🖥️ Tampilan Awal (🌞 Light / 🌙 Dark)
-![Tampilan Project di Light Mode](./public/assets/img/dashboard-view-in-light-mode.png)
-![Tampilan Project di Dark Mode](./public/assets/img/dashboard-view-in-dark-mode.png)
+## Home Screen (Light / Dark)
+![Project view in Light Mode](./public/assets/img/dashboard-view-in-light-mode.png)
+![Project view di Dark Mode](./public/assets/img/dashboard-view-in-dark-mode.png)
 
 ---
-## 🎯 Fitur
+## Feature
 
-- **CRUD Lengkap:**
-  - Data Siswa, Jurusan, Guru, Konselor, Pelanggaran, Konseling, Industri, dan Admin.
-- **Riwayat Pelanggaran & Jadwal Konseling:**
-  - Menampilkan riwayat pelanggaran siswa dan jadwal konseling yang mengintegrasikan dengan kalender.
-- **Dashboard Interaktif:**
-  - Ringkasan total siswa, pelanggaran, konseling, dan siswa industri.
-  - Menampilkan jadwal konseling mendatang.
-  - Chart interaktif dengan ApexCharts untuk:
-    - Jumlah siswa berdasarkan jurusan.
-    - Jumlah siswa industri berdasarkan jurusan.
-    - Perbandingan siswa konseling dan pelanggaran.
+- **Full CRUD:**
+  - Data on students, degree programmes, teachers, counsellors, disciplinary offences, counselling, industry placements and administration.
+- **Disciplinary Record & Counselling Schedule:**
+  - Displays the student’s disciplinary record and counselling schedule, integrated with the calendar.
+- **Interactive Dashboard:**
+  - Summary of total student numbers, disciplinary cases, counselling sessions and work-placement students.
+  - Displays the schedule of upcoming counselling sessions.
+  - Interactive charts using ApexCharts for:
+    - Number of students by course of study.
+    - Number of work-placement students by course of study.
+    - Comparison of students receiving counselling and those involved in disciplinary cases.
+
 
 ---
 
-## 🛠️ Teknologi yang Digunakan
+## Technology Used
 
 - **Frontend:** HTML, CSS, TailwindCSS, JavaScript
 - **Backend:** CodeIgniter 4 (CI4)
@@ -36,74 +35,53 @@ App Bimbingan Konseling adalah aplikasi yang dirancang untuk membantu pengelolaa
 
 ---
 
-## 📦 Cara Instalasi & Instruksi
+## Installation Guide & Instructions
 
-### Persyaratan Awal:
+### Entry Requirements:
 
-Pastikan sudah terinstal:
+Make sure the following are installed:
 
-- **Node.js** (untuk mengelola Tailwind dan Webpack)
-- **Composer** (untuk dependensi CodeIgniter 4)
+- **Node.js** (to manage Tailwind and Webpack)
+- **Composer** (for CodeIgniter 4 dependencies)
 
-### Langkah Instalasi:
 
-1. **Clone repository atau download ZIP:**
+### Installation Steps:
+
+1. **Clone the repository or download the ZIP file:**
 
    ```bash
    git clone https://github.com/gusalitt/app-bimbingan-konseling.git
    cd app-bimbingan-konseling
    ```
 
-2. **Install dependensi:**
+2. **Install dependencies:**
 
    ```bash
    composer install
-   npm install
+   pnpm install
    ```
 
 3. **Setup file ****`.env`****:**
 
-   - Salin file `.env.example` dan ubah namanya menjadi `.env`
+   - Copy the `.env.example` file and rename it to `.env`
 
    ```bash
    cp .env.example .env
    ```
 
-   - Sesuaikan konfigurasi database dan environment di dalam file `.env`
+   - Adjust the database and environment configurations in the file `.env`
 
-4. **Migrasi Database:**
+4. **Database Migration:**
 
-   - Buat database di MySQL sesuai dengan nama yang ada di `.env`.
-   - Jalankan migrasi untuk membuat tabel:
+   - Create a database in MySQL with the name specified in `.env`.
+   - Run the migration to create the table:
 
    ```bash
    php spark migrate
    ```
 
-5. **Jalankan Aplikasi:**
+5. **Run the Application:**
 
    ```bash
    php spark serve
    ```
-
-### Untuk Pengembangan (Tailwind & Webpack):
-
-- **Jika ingin mengubah atau menambahkan kodingan Tailwind, jalankan:**
-  ```bash
-  npm run dev
-  ```
-- **Jika melakukan perubahan pada konfigurasi Webpack atau ApexCharts, jalankan:**
-  ```bash
-  npm run build
-  ```
-
----
-
-## 🤝 Kontribusi
-
-Kontribusi terbuka untuk siapa saja! Jika ingin berkontribusi:
-
-- Fork repository ini.
-- Buat branch baru (`git checkout -b feature-branch`).
-- Commit perubahan (`git commit -m 'Deskripsi perubahan'`).
-- Push branch dan buat pull request.
